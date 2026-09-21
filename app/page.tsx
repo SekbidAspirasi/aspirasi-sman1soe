@@ -1,6 +1,7 @@
 import React from 'react';
 
 const App = () => {
+  const [showAbout, setShowAbout] = React.useState(false);
   return (
     // Outer container matching the red background context of the reference
     <div className="min-h-screen bg-gradient-to-br from-[#8B0000] to-[#5C0000] flex items-center justify-center p-4 md:p-6 lg:p-10 font-sans selection:bg-red-600 selection:text-white overflow-hidden">
@@ -88,12 +89,24 @@ const App = () => {
                   Kirim Aspirasi
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
                 </a>
-                <a 
-                  href="#tentang" 
-                  className="bg-white text-black px-8 md:px-10 py-4 md:py-4.5 rounded-full font-bold text-xs md:text-sm uppercase tracking-widest hover:bg-gray-100 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_20px_rgba(0,0,0,0.15)] flex items-center justify-center"
-                >
-                  Tentang Kami
-                </a>
+                <button 
+  onClick={() => setShowAbout(!showAbout)}
+  className="bg-white text-black px-8 md:px-10 py-4 md:py-4.5 rounded-full font-bold text-xs md:text-sm uppercase tracking-widest hover:bg-gray-100 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_20px_rgba(0,0,0,0.15)] flex items-center justify-center cursor-pointer"
+>
+  {showAbout ? 'Tutup Tentang Kami' : 'Tentang Kami'}
+</button>
+
+{showAbout && (
+  <div className="mt-6 bg-black/80 backdrop-blur-md border border-white/20 p-6 md:p-8 rounded-3xl max-w-2xl text-white transition-all duration-500 shadow-2xl">
+    <h3 className="text-xl font-black text-[#E31837] mb-2 uppercase tracking-wider">Tentang Platform Aspirasi</h3>
+    <p className="text-sm text-gray-200 leading-relaxed mb-4">
+      Platform resmi siswa SMA Negeri 1 Soe untuk menyalurkan kritik, saran, dan ide kreatif secara aman, transparan, dan privat langsung kepada pengurus OSIS.
+    </p>
+    <div className="border-t border-white/10 pt-3 text-xs text-gray-400">
+      📍 Jl. Prof. Dr. W. Z. Yohanes No. 33, Soe, Kab. Timor Tengah Selatan, NTT.
+    </div>
+  </div>
+)}
               </div>
             </div>
           </div>
