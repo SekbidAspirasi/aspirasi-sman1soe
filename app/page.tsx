@@ -37,11 +37,7 @@ const App = () => {
                   {/* Outer circle decoration for logo */}
                   <div className="w-full h-full rounded-full border border-red-100 flex items-center justify-center p-2 bg-gray-50 overflow-hidden relative group">
                      {/* Replace src with your actual SMAN 1 Soe logo URL */}
-                     <img 
-                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Logo_Tut_Wuri_Handayani.svg/1024px-Logo_Tut_Wuri_Handayani.svg.png" 
-                        alt="Logo SMA N 1 Soe" 
-                        className="w-[90%] h-[90%] object-contain group-hover:scale-110 transition-transform duration-500" 
-                     />
+                     <img src="/logo.png" alt="Logo SMAN 1 Soe" />
                   </div>
                 </div>
               </div>
