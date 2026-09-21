@@ -10,8 +10,8 @@ const App = () => {
       {/* Main white card container */}
       <div className="bg-white w-full max-w-[1500px] rounded-[2.5rem] md:rounded-[3rem] p-3 md:p-5 shadow-2xl relative">
         
-        {/* Hero Section Wrapper */}
-        <div className="relative w-full h-[650px] md:h-[750px] lg:h-[800px] rounded-[2rem] md:rounded-[2.5rem] overflow-hidden bg-gray-900">
+        {/* Hero Section Wrapper (Menggunakan min-h agar bisa memanjang otomatis saat Tentang Kami dibuka) */}
+        <div className="relative w-full min-h-[650px] md:min-h-[750px] lg:min-h-[800px] rounded-[2rem] md:rounded-[2.5rem] overflow-hidden bg-gray-900 flex flex-col justify-center py-16 md:py-20">
           
           {/* Background Image */}
           <img
@@ -21,7 +21,7 @@ const App = () => {
           />
 
           {/* Dark Gradient Overlay for text readability */}
-          <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/60 to-black/20" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/60 to-black/30" />
 
           {/* Floating Navbar (Clean & Minimalist: Logo Only) */}
           <div className="absolute top-6 md:top-8 left-1/2 transform -translate-x-1/2 w-[95%] max-w-6xl z-20">
@@ -50,7 +50,7 @@ const App = () => {
           </div>
 
           {/* Hero Content (Left Aligned) */}
-          <div className="absolute inset-0 z-10 flex flex-col justify-center px-6 md:px-16 lg:px-24 pt-28">
+          <div className="relative z-10 flex flex-col justify-center px-6 md:px-16 lg:px-24 mt-12 md:mt-8">
             <div className="max-w-4xl">
               
               {/* Sub-heading */}
@@ -60,7 +60,7 @@ const App = () => {
               </p>
 
               {/* Main Heading */}
-              <h1 className="text-white text-[3.5rem] leading-[0.9] sm:text-7xl lg:text-[6rem] xl:text-[7rem] font-black uppercase tracking-tight">
+              <h1 className="text-white text-[3rem] leading-[0.9] sm:text-7xl lg:text-[6rem] xl:text-[7rem] font-black uppercase tracking-tight">
                 <span className="block text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-300">
                   Aspirasi Siswa
                 </span>
@@ -93,9 +93,9 @@ const App = () => {
                 </button>
               </div>
 
-              {/* Kotak Informasi Tentang Kami (Muncul pas diklik) */}
+              {/* Kotak Informasi Tentang Kami (Muncul pas diklik dengan layout aman) */}
               {showAbout && (
-                <div className="mt-6 bg-black/85 backdrop-blur-md border border-white/20 p-6 md:p-8 rounded-3xl max-w-2xl text-white transition-all duration-500 shadow-2xl">
+                <div className="mt-6 mb-4 bg-black/85 backdrop-blur-md border border-white/20 p-6 md:p-8 rounded-3xl max-w-2xl text-white transition-all duration-500 shadow-2xl">
                   <h3 className="text-xl font-black text-[#E31837] mb-2 uppercase tracking-wider">Tentang Platform Aspirasi</h3>
                   <p className="text-sm text-gray-200 leading-relaxed mb-4">
                     Platform resmi siswa SMA Negeri 1 Soe untuk menyalurkan kritik, saran, dan ide kreatif secara aman, transparan, dan privat langsung kepada pengurus OSIS.
