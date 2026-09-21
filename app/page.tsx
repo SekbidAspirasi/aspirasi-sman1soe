@@ -25,58 +25,34 @@ const App = () => {
           {}
           {/* Floating Navbar */}
           <div className="absolute top-6 md:top-8 left-1/2 transform -translate-x-1/2 w-[95%] md:w-[90%] max-w-6xl z-50">
-            <nav className="bg-white rounded-full h-16 md:h-[72px] shadow-[0_10px_30px_rgba(0,0,0,0.15)] flex items-center justify-between px-3 md:px-4 pr-3 md:pr-6 relative w-full border border-gray-100/50 backdrop-blur-md">
-              
-              {/* Left: Protruding Logo Container */}
-              <div className="relative flex-shrink-0 w-16 md:w-20 h-full flex items-center">
-                {/* 
-                  The absolute positioning combined with top-1/2 and -translate-y-1/2 
-                  creates the 'protruding' effect matching the reference design.
-                */}
-                <div className="absolute left-[-10px] md:left-[-15px] top-1/2 -translate-y-1/2 w-[85px] h-[85px] md:w-[110px] md:h-[110px] bg-white rounded-full flex items-center justify-center shadow-[0_8px_20px_rgba(0,0,0,0.15)] p-1.5 md:p-2 border-2 border-white transition-transform duration-300 hover:scale-105">
-                  {/* Outer circle decoration for logo */}
-                  <div className="w-full h-full rounded-full border border-red-100 flex items-center justify-center p-2 bg-gray-50 overflow-hidden relative group">
-                     {/* Replace src with your actual SMAN 1 Soe logo URL */}
-                     <img src="/logo.png" alt="Logo SMAN 1 Soe" />
-                  </div>
-                </div>
-              </div>
+            <nav className="bg-white rounded-full h-16 md:h-[72px] shadow-[8_10px_30px_rgba(0,0,0,0.15)] flex items-center justify-between px-6 md:px-10">
+  {/* Left: Protruding Logo Container */}
+  <div className="relative flex-shrink-0 w-16 md:w-20 h-full flex items-center">
+    <div className="absolute left-[-10px] md:left-[-15px] top-1/2 -translate-y-1/2 w-[85px] h-[85px] md:w-[110px] md:h-[110px]">
+      <div className="w-full h-full rounded-full border border-red-100 flex items-center justify-center p-2 bg-gray-50 overflow-hidden shadow-md">
+        <img 
+          src="/logo.png" 
+          alt="Logo SMAN 1 Soe" 
+          className="w-[90%] h-[90%] object-contain group-hover:scale-110 transition-transform duration-500" 
+        />
+      </div>
+    </div>
+  </div>
 
-              {}
-              {/* Center: Navigation Links (Hidden on small screens) */}
-              <div className="flex items-center justify-center space-x-7 xl:space-x-10 pl-16">
-                {[
-                  'Beranda', 
-                  'Tentang Kami', 
-                  
-                  'Sekolah Kami', 
-                  
-                ].map((item, index) => (
-                  <a 
-                    key={index} 
-                    href={`#${item.toLowerCase().replace(/\s+/g, '-')}`} 
-                    className="text-[10px] xl:text-[11px] font-bold uppercase text-black tracking-[0.15em] hover:text-[#E31837] transition-colors duration-300 relative group"
-                  >
-                    {item}
-                    {/* Hover underline effect */}
-                    <span className="absolute -bottom-1.5 left-1/2 w-0 h-[2px] bg-[#E31837] group-hover:w-full group-hover:left-0 transition-all duration-300"></span>
-                  </a>
-                ))}
-              </div>
-
-              {}
-              {/* Right: Log In Button */}
-              <div className="flex-shrink-0 flex items-center ml-auto lg:ml-0 gap-3">
-                
-                
-                <a 
-                  href="#login" 
-                  className="bg-[#E31837] text-white px-7 md:px-9 py-2.5 md:py-3 rounded-full text-[11px] md:text-xs font-bold uppercase tracking-widest hover:bg-[#B3122A] hover:shadow-[0_0_15px_rgba(227,24,55,0.4)] transition-all duration-300 active:scale-95"
-                >
-                  Log In
-                </a>
-              </div>
-            </nav>
+  {/* Center: Navigation Links */}
+  <div className="flex items-center justify-center space-x-7 xl:space-x-10 pl-16">
+    {['Beranda', 'Tentang Kami', 'Sekolah Kami'].map((item, index) => (
+      <a 
+        key={index}
+        href={`#${item.toLowerCase().replace(/\s+/g, '-')}`}
+        className="text-[10px] xl:text-[11px] font-bold uppercase text-black tracking-[0.15em] hover:text-[#E31837] transition relative group"
+      >
+        {item}
+        <span className="absolute -bottom-1.5 left-1/2 -translate-x-1/2 w-0 h-[2px] bg-[#E31837] group-hover:w-full transition-all duration-300"></span>
+      </a>
+    ))}
+  </div>
+</nav>
           </div>
 
           {}
