@@ -67,12 +67,7 @@ const App = () => {
               {}
               {/* Right: Log In Button */}
               <div className="flex-shrink-0 flex items-center ml-auto lg:ml-0 gap-3">
-                {/* Mobile Menu Toggle (Visible only on small screens) */}
-                <button className="lg:hidden w-10 h-10 flex flex-col justify-center items-center gap-1.5 bg-gray-50 rounded-full">
-                  <span className="w-5 h-0.5 bg-black rounded-full"></span>
-                  <span className="w-5 h-0.5 bg-black rounded-full"></span>
-                  <span className="w-5 h-0.5 bg-black rounded-full"></span>
-                </button>
+                
                 
                 <a 
                   href="#login" 
