@@ -44,7 +44,7 @@ const App = () => {
 
               {}
               {/* Center: Navigation Links (Hidden on small screens) */}
-              <div className="hidden lg:flex items-center justify-center space-x-7 xl:space-x-10 pl-16">
+              <div className="flex items-center justify-center space-x-7 xl:space-x-10 pl-16">
                 {[
                   'Beranda', 
                   'Tentang Kami', 
