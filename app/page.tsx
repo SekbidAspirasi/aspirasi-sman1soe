@@ -48,11 +48,9 @@ const App = () => {
                 {[
                   'Beranda', 
                   'Tentang Kami', 
-                  'Akademik', 
+                  
                   'Sekolah Kami', 
-                  'Pendaftaran', 
-                  'Komunitas', 
-                  'Karir'
+                  
                 ].map((item, index) => (
                   <a 
                     key={index} 
