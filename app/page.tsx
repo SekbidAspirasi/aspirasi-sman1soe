@@ -19,7 +19,7 @@ const App = () => {
     setLoading(true);
     setSuccessMessage('');
 
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbw6kaVn4V6XxZdxv5SAhu6yIXEAoWU0kO52btXBcLBo1-B9btPONW5ICtkGnZUacOh1/exec';
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyrx9OFWAGLP1xl6MugM0JdjM-b0U1bMdYfQbCksNusYZPjSUbs9Wwg-Kba2veDacOfcg/exec';
     
     const formData = new URLSearchParams();
     formData.append('Nama / Kelas', nama ? nama : 'Anonim / Rahasia');
@@ -136,7 +136,7 @@ const App = () => {
                 <div className="mt-6 mb-4 bg-black/85 backdrop-blur-md border border-white/20 p-6 md:p-8 rounded-3xl max-w-2xl text-white transition-all duration-500 shadow-2xl">
                   <h3 className="text-xl font-black text-[#E31837] mb-2 uppercase tracking-wider">Tentang Platform Aspirasi</h3>
                   <p className="text-sm text-gray-200 leading-relaxed mb-4">
-                    Platform resmi siswa SMA Negeri 1 Soe untuk menyalurkan kritik, saran, dan ide kreatif secara aman, transparan, dan privat langsung kepada pengurus OSIS. Dan dikelola secara profesional oleh Sekbid Aspirasi serta bekerja sama dengan Pihak Ketua OSIS dan Pembina OSIS SMA Negeri 1 Soe.
+                    Platform resmi siswa SMA Negeri 1 Soe untuk menyalurkan kritik, saran, dan ide kreatif secara aman, transparan, dan privat langsung kepada pengurus OSIS.
                   </p>
                   <div className="border-t border-white/10 pt-3 text-xs text-gray-400">
                     📍 Jl. Prof. Dr. W. Z. Yohanes No. 33, Soe, Kab. Timor Tengah Selatan, NTT.
